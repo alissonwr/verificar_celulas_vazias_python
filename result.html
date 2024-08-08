@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Resultado da Análise</title>
+</head>
+<body>
+    <h1>Análise Completa</h1>
+    <p>Baixe os relatórios abaixo:</p>
+    <ul>
+        <li><a href="{{ url_for('download_file', filename='output_verificacao.xlsx') }}">Relatório Excel</a></li>
+        <li><a href="{{ url_for('download_file', filename='relatorio_celulas_vazias.docx') }}">Relatório Word</a></li>
+    </ul>
+    <a href="{{ url_for('index') }}">Voltar</a>
+</body>
+</html>
